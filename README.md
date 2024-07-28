@@ -3,6 +3,9 @@
 
 This project implements and evaluates a Retrieval-Augmented Generation (RAG) system for a travel itinerary recommender. The system retrieves relevant contexts for user queries and generates answers using Google Generative AI. The evaluation process ensures that the generated answers are faithful, relevant, and accurate.
 
+**Youtube:** https://www.youtube.com/watch?v=X4Q3vdFc78M&ab_channel=bhargavisikhakolli
+**Document:** 
+
 
 ## Prerequisites
 
