@@ -4,7 +4,8 @@
 This project implements and evaluates a Retrieval-Augmented Generation (RAG) system for a travel itinerary recommender. The system retrieves relevant contexts for user queries and generates answers using Google Generative AI. The evaluation process ensures that the generated answers are faithful, relevant, and accurate.
 
 **Youtube:** https://www.youtube.com/watch?v=X4Q3vdFc78M&ab_channel=bhargavisikhakolli
-**Document:** 
+
+**Document:** https://drive.google.com/file/d/1s6gYk4cZpHYz_nmvZcPe6nQA-hHxAiEx/view?usp=sharing
 
 
 ## Prerequisites
@@ -56,7 +57,8 @@ Before making improvements to the system, the following metrics were evaluated:
 Several improvements were made to enhance the performance of the RAG system. These include:
 
 1. **Enhanced Context Retrieval**: Improved the context retrieval process to ensure more relevant contexts are retrieved and reranked effectively.
-2. **Refined Answer Generation**: Updated the prompt and generation method to produce more accurate and contextually appropriate answers.
+2. 
+3. **Refined Answer Generation**: Updated the prompt and generation method to produce more accurate and contextually appropriate answers.
 
 ## Improved Evaluation Scores
 
@@ -71,11 +73,17 @@ After implementing the improvements, the system was re-evaluated and the scores 
 ### The main script RAG_improvements.py includes the following steps:
 
 **Environment Setup:** Load API keys and initialize the Google Generative AI client.
+
 **Data Preparation:** Define user queries, ground truth contexts, and ground truth answers.
+
 **Context Retrieval:** Use BM25 to retrieve the most relevant contexts for each query.
+
 **Context Reranking:** Rerank the retrieved contexts based on simple relevance scoring.
+
 **Answer Generation:** Generate answers using Google Generative AI.
+
 **Post-Processing:** Apply rule-based corrections to the generated answers.
+
 **Evaluation:** Evaluate the generated answers using various metrics.
 
 
