@@ -1,12 +1,89 @@
 # RAG_Evaluation
 
 
+This project implements and evaluates a Retrieval-Augmented Generation (RAG) system for a travel itinerary recommender. The system retrieves relevant contexts for user queries and generates answers using Google Generative AI. The evaluation process ensures that the generated answers are faithful, relevant, and accurate.
+
+
+## Prerequisites
+
+Ensure you have the following installed:
+- Python 3.7 or later
+- The required packages listed in `requirements.txt`
+
+Install the required packages using:
+
+```
+pip install -r requirements.txt
+```
+
+## Evaluation Metrics
+The evaluation process uses the following metrics to assess the quality of the generated answers:
+
+**Faithfulness:** Ensures the answer is supported by the context
+
+**Answer Relevancy:** Measures how relevant the answer is to the query
+
+**Context Precision:** Precision of the context used in the answer
+
+**Context Recall:** Recall of the context used in the answer
+
+**Context Entity Recall:** Recall of entities mentioned in the context
+
+**Answer Similarity:** Similarity between the generated answer and the ground truth answer
+
+**Answer Correctness:** Correctness of the generated answer
+
+**Harmfulness:** Measures potential harmful content in the answer
+
+
+
+Before making improvements to the system, the following metrics were evaluated:
+
+- **Faithfulness**: 0.67
+- **Answer Relevancy**: 0.65
+- **Context Precision**: 0.67
+- **Context Recall**: 0.33
+- **Context Entity Recall**: 0.67
+- **Answer Similarity**: 0.92
+- **Answer Correctness**: 0.56
+- **Harmfulness**: 0.00
+
+## Improvements Made
+
+Several improvements were made to enhance the performance of the RAG system. These include:
+
+1. **Enhanced Context Retrieval**: Improved the context retrieval process to ensure more relevant contexts are retrieved and reranked effectively.
+2. **Refined Answer Generation**: Updated the prompt and generation method to produce more accurate and contextually appropriate answers.
+
+## Improved Evaluation Scores
+
+After implementing the improvements, the system was re-evaluated and the scores showed significant enhancements in key metrics:
+
+- **Answer Relevancy**: Improved from 0.65 to 0.83
+- **Answer Correctness**: Improved from 0.56 to 0.68
 
 
 
 
-## Improvements
+### The main script RAG_improvements.py includes the following steps:
 
+**Environment Setup:** Load API keys and initialize the Google Generative AI client.
+**Data Preparation:** Define user queries, ground truth contexts, and ground truth answers.
+**Context Retrieval:** Use BM25 to retrieve the most relevant contexts for each query.
+**Context Reranking:** Rerank the retrieved contexts based on simple relevance scoring.
+**Answer Generation:** Generate answers using Google Generative AI.
+**Post-Processing:** Apply rule-based corrections to the generated answers.
+**Evaluation:** Evaluate the generated answers using various metrics.
+
+
+## Summary of Improvements
+
+The improvements in the RAG system led to a notable increase in the relevancy and correctness of the answers generated. The metrics reflect a more reliable and user-friendly system capable of providing better travel itinerary recommendations.
+
+The focus on enhancing context retrieval and refining answer generation has proven effective in achieving these improvements, demonstrating the importance of these components in the overall performance of the RAG system.
+
+
+## Evaluation Scope:
 
 ### Feedback Loop:
 
